@@ -1,13 +1,14 @@
-package bootstrap;
+package com.udemy_course.spring5webapp.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.udemy_course.spring5webapp.domain.Author;
 import com.udemy_course.spring5webapp.domain.Book;
+import com.udemy_course.spring5webapp.repositories.AuthorRepository;
+import com.udemy_course.spring5webapp.repositories.BookRepository;
 
-import repositories.AuthorRepository;
-import repositories.BookRepository;
+
 
 @Component
 //tells spring to go ahead and detect this as spring managed component
@@ -42,7 +43,7 @@ public class BootStrapSpringData implements CommandLineRunner {
 		bookRepo.save(noEJB);
 		
 		System.out.println("Starting BootStrap Application");
-		System.out.println("Number of Books"+ bookRepo.count());
+		System.out.println("Number of Books "+ bookRepo.count());
 		
 	}
 
